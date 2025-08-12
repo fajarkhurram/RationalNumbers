@@ -17,7 +17,7 @@ public class RationalNum {
     }
 
     //We found GCD,so that we can use GCD to simplify rational numbers
-    public static void gcd(int a,int b){
+    public static RationalNum gcd(int a,int b){
 
         int originalNum = a;
         int originalDen = b;
@@ -33,7 +33,11 @@ public class RationalNum {
         //reduced fraction
         originalNum = originalNum / gcdVal;
         originalDen = originalDen /gcdVal;
-        System.out.println(originalNum +"/"+ originalDen);
+
+        RationalNum r = new RationalNum(originalNum,originalDen);
+        System.out.println(r);
+       return r;
+
 
     }
 
